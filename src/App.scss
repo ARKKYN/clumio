@@ -1,0 +1,22 @@
+.app {
+ @apply h-screen w-screen;
+}
+
+
+ul.nav {
+  li {
+    @apply inline;
+    padding: 5px 24px;
+
+    button {
+      @apply font-bold font-sans;
+    }
+  }
+}
+
+
+input[search] {
+  appearance: none  !important;
+  outline: none !important;
+  border: none !important;
+}

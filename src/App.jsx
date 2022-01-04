@@ -88,9 +88,9 @@ function App() {
         temp[key] = value;
       });
 
-      setFilters({ ...filters, ...temp });
+      setFilters(prev => ({ ...prev, ...temp }));
     },
-    [location.search]
+    [location.search, setFilters]
   );
 
   const onNavButtonClick = useCallback(
@@ -119,7 +119,7 @@ function App() {
   }
 
   return (
-    <div className="App flex">
+    <div className="App flex h-screen">
       <div className="h-full w-5/6 flex min-h-screen flex-col overflow-y-scroll dark:bg-night">
         <Header
           filter={filters.sortBy}
@@ -132,7 +132,7 @@ function App() {
         </article>
       </div>
       <div className="w-1/6 dark:bg-midnight min-h-screen shadow flex flex-col ">
-        <div className="w-10/12 mx-auto">
+        <div className="w-10/12 mx-auto overflow-auto">
           <h2 className="font-bold py-14 text-blue-700 dark:text-gray-400">
             Discover Options
           </h2>

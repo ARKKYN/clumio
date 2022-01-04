@@ -3,10 +3,7 @@ import PropTypes from "prop-types";
 import SearchInput from "components/SearchInput";
 
 
-
-
 function Header({ search, onNavButtonClick, onSearchChange, filter }) {
-
   const getClass = (text) => {
     if (text.indexOf(filter) > -1){
       return "text-black dark:text-white";
@@ -15,7 +12,7 @@ function Header({ search, onNavButtonClick, onSearchChange, filter }) {
   }
 
   return (
-    <header className="flex py-14 flex-row justify-center flex-wrap gap-2 mx-auto w-5/6 overflow-y-scroll h-1/6">
+    <header className="flex py-14 flex-row justify-center flex-wrap gap-2 mx-auto mb-6 w-5/6 overflow-y-scroll h-1/6">
       <div className="flex-0">
         <h1 className="dark:text-gray-100  font-bold font-serif text-3xl">
           Discover
